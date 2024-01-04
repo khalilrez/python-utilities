@@ -1,6 +1,5 @@
 # Ignore virtualenv files and folders
-bin/
+bin/*
 include/
 lib/
 lib64/
-pyenv.cfg

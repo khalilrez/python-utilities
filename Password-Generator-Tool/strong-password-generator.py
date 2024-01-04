@@ -14,7 +14,7 @@ def searchPassword():
     with open("passwords.txt", "r") as f:
         passwords = f.readlines()
     search = input("Which password would you like to search for? ")
-    print("\nPASSWORD(S) MATCHING : "+search+" ---------------------------------\n")
+    print("\nPASSWORD(S) MATCHING : "+search+"  ---------------------------------\n")
     for password in passwords:
        if password.startswith(search):
             print(password)
