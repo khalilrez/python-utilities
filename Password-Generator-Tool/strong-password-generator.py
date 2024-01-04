@@ -1,4 +1,5 @@
 import random
+import pyperclip
 
 def showPasswords():
     print("\nPASSWORDS---------------------------------\n")
@@ -49,7 +50,8 @@ def passwordGenerator():
     print("\033[0;38m")    
     print("\nIdentified by: \033[0;32m"+id)
     print("\033[0;38m")
-    print("-----------------END GENERATED PASSWORD\n\n")
+    pyperclip.copy(password)
+    print("-----------------HAS BEEN COPIED TO YOUR CLIPBOARD\n\n")
     store = input("Would you like to store this password? (y/n) ")
     if store == "y":
         store_password(id+":"+password)
