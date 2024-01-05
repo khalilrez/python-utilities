@@ -28,21 +28,25 @@ def addAndCommit():
 def mainMenu(args):
     exitSignal = 0
     while exitSignal!=1:
-        print("Welcome to Git-Initializer")
-        print("1. Create a local repository")
-        print("2. Create a remote repository")
-        print("3. Push to remote repository")
-        print("4. Add and commit")
-        print("0. Exit")
         if args.create:
             createLocalRepo()
+            exit()
         elif args.remote:
             createRemoteRepo()
+            exit()
         elif args.push:
             pushToRemote()
+            exit()
         elif args.add:
             addAndCommit()
+            exit()
         else:
+            print("Welcome to Git-Initializer")
+            print("1. Create a local repository")
+            print("2. Create a remote repository")
+            print("3. Push to remote repository")
+            print("4. Add and commit")
+            print("0. Exit")
             choice = input("Enter your choice: ")
         if choice == "1":
             createLocalRepo()
