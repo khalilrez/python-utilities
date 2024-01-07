@@ -1,5 +1,2 @@
 # Ignore virtualenv files and folders
-bin/*
-include/
-lib/
-lib64/
+password-gen-env/

@@ -1,16 +1,20 @@
 import random
 import pyperclip
+import os
 
 def showPasswords():
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("\nPASSWORDS---------------------------------\n")
     with open("passwords.txt", "r") as f:
         passwords = f.readlines()
     for password in passwords:
         print(password)
     print("------------------------------------------\n ")
+    input("Press Any key to return to main menu")
 
 
 def searchPassword():
+    os.system('cls' if os.name == 'nt' else 'clear')
     with open("passwords.txt", "r") as f:
         passwords = f.readlines()
     search = input("Which password would you like to search for? ")
@@ -21,6 +25,7 @@ def searchPassword():
     print("------------------------------------------\n ")
 
 def deletePassword():
+    os.system('cls' if os.name == 'nt' else 'clear')
     with open("passwords.txt", "r") as f:
         passwords = f.readlines()
         for password in passwords:
@@ -31,13 +36,14 @@ def deletePassword():
                 if not password.startswith(delete):
                     f.write(password)
                     print("Done!")
-                    return
+                    
                 
 def store_password(password):
     with open("passwords.txt", "a") as f:
         f.write(password+"\n")
 
 def passwordGenerator():
+    os.system('cls' if os.name == 'nt' else 'clear')
     id = input("Which account is this password for? ")
     if id == "":
         id = "------ unspecified ------"
@@ -63,12 +69,13 @@ def passwordGenerator():
 
 
 chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*().,?0123456789'
+os.system('cls' if os.name == 'nt' else 'clear')
 welcome = input("Welcome to my Password Generator! Press enter to continue.")
-
 
 exit = False
 passwords = []
 while not exit:
+    os.system('cls' if os.name == 'nt' else 'clear')
     print('''
         ************** MAIN MENU ***********
         *   1. Generate Password           *
