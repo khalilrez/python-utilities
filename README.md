@@ -6,9 +6,20 @@ This project consists of a collection of Python utility scripts designed to perf
 
 
 ## Usage
+### 1. Make each script executable ###
+```bash
+global-root-directory > chmod a+x */*.py
+```
+###  2. Make a VENV and install requirements ###
+```bash
 
-Each utility script has its own usage instructions.
+script-directory > python3 -m venv [venv-name]
+script-directory > source [venv-name]/bin/activate
+script-directory > pip install -r requirements.txt
+
+```
+### 3. Each utility script has its own usage instructions. ###
 
 ```bash
-python script_name.py [arguments]
+./script_name.py [arguments]
 ```
