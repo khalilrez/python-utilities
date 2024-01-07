@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os, time
 from playsound import playsound
 import multiprocessing
