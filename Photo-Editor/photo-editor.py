@@ -11,9 +11,9 @@ pathOut = './edited-images'
 parser = argparse.ArgumentParser(description='Git-Initializer, a simple python script to initialize a git repository\n. Use without any arguments to run the script in interactive mode')
 parser.add_argument('-s', '--sharpen', action='store_true', help='Sharpen Image')
 parser.add_argument('-g', '--grayscale', action='store_true', help='Turn image into grayscale mode')
-parser.add_argument('-c', '--contrast', action='store_true', help='Add contrast')
-parser.add_argument('-d', '--dcontrast', action='store_true', help='Add contrast')
-parser.add_argument('-r', '--round', action='store_true', help='Add contrast')
+parser.add_argument('-c', '--contrast', action='store_true', help='increase contrast (factor 1.5)')
+parser.add_argument('-d', '--dcontrast', action='store_true', help='decrase contrast (factor 0.8)')
+parser.add_argument('-r', '--round', action='store_true', help='Crop image into round shape')
 
 
 args = parser.parse_args()
